@@ -29,3 +29,4 @@ Examples of resources:
 - GraphQL
 - Sanity.IO
 - Knex
+- MithrilJS
