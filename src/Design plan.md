@@ -1,3 +1,14 @@
+Stack
+- Typescript
+- Next.js ( React-framework )
+- GraphQL with Apollo
+- PostgreSQL
+- Redis? ElasticSearch?
+
+Features
+- AMP?
+
+
 1. Public side
 Create front page
 - About me and this page
@@ -24,8 +35,10 @@ Create a list of cool developer resources by category. User interface that makes
   - etc
 
 Examples of resources:
-- Css modules
-- Gatsby
-- GraphQL
+- CSS-modules
+- Gatsby.js
+- Mithril.js
 - Sanity.IO
-- Knex
+- Knex.js
+- ElasticSearch
+- Docker & Kubernetes
