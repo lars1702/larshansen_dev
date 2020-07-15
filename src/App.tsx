@@ -1,7 +1,7 @@
-import React from "react"
+import React, { FunctionComponent, ReactElement, FunctionComponentElement, ComponentElement } from "react"
 import "./App.css"
 
-function App() {
+const App = ():ReactElement => {
   return (
     <div className="App">
       <nav className="nav">
