@@ -1,7 +1,7 @@
-import React, { FunctionComponent, ReactElement, FunctionComponentElement, ComponentElement } from "react"
+import React, { ReactNode } from "react"
 import "./App.css"
 
-const App = ():ReactElement => {
+const App = ():ReactNode => {
   return (
     <div className="App">
       <nav className="nav">
@@ -10,5 +10,6 @@ const App = ():ReactElement => {
     </div>
   )
 }
+
 
 export default App
