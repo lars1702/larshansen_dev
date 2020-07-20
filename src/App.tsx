@@ -1,15 +1,22 @@
-import React, { ReactNode } from "react"
-import "./App.css"
+import React from "react"
+import styled from "styled-components/macro"
+import NavBar from "./Navbar/Navbar"
+import Particles from "./Particles/Particles"
 
-const App = ():ReactNode => {
+const AppContainer = styled.div`
+  position: relative;
+  text-align: center;
+  height: 100%;
+  min-height: 100vh;
+`
+
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <nav className="nav">
-        <header className="App-header"></header>
-      </nav>
-    </div>
+    <AppContainer>
+      <NavBar />
+      <Particles />
+    </AppContainer>
   )
 }
-
 
 export default App
