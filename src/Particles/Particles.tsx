@@ -8,8 +8,8 @@ const StyledParticles = styled(ParticlesTS)`
   background: #00022e;
 `
 
-const Particles = (): JSX.Element => (
-  <StyledParticles height="100%" params={config} />
-)
+const Particles = (): JSX.Element => <StyledParticles height="100%" params={config} />
+
+//sdfsd
 
 export default Particles

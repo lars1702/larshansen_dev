@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.1",
+    "@types/webpack-env": "^1.15.2",
     "babel-plugin-macros": "^2.8.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -44,6 +45,7 @@
     "@typescript-eslint/parser": "^3.6.1",
     "babel-plugin-styled-components": "^1.10.7",
     "cosmiconfig": "^6.0.0",
+    "hooks.macro": "^1.1.2",
     "styled-components.macro": "^1.0.0",
     "typescript": "^3.9.6"
   }
