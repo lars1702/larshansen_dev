@@ -1,15 +1,19 @@
 import React from "react"
-import config from "./config"
-import ParticlesTS from "react-tsparticles"
-import styled from "styled-components"
+import Particles, { IParticlesParams } from "react-tsparticles"
+// import styled from "styled-components"
 
-const StyledParticles = styled(ParticlesTS)`
-  height: 100%;
-  background: #00022e;
-`
+// const StyledParticles = styled(reactTSParticles)`
+//   height: 100%;
+//   background: #00022e;
+// `
+interface IProps {
+  options: IParticlesParams
+}
 
-const Particles = (): JSX.Element => <StyledParticles height="100%" params={config} />
+class Main extends React.PureComponent<IProps> {
+  render(): JSX.Element {
+    return <Particles options={this.props.options} className="frame-layout__particles" />
+  }
+}
 
-//sdfsd
-
-export default Particles
+export default Main

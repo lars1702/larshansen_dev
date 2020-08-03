@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components/macro"
 import NavBar from "./Navbar/Navbar"
 import Particles from "./Particles/Particles"
+import config2 from "./Particles/config2"
 
 const AppContainer = styled.div`
   position: relative;
@@ -14,7 +15,7 @@ const App = (): JSX.Element => {
   return (
     <AppContainer>
       <NavBar />
-      <Particles />
+      <Particles options={config2} />
     </AppContainer>
   )
 }

@@ -1,4 +1,9 @@
 export default {
+  background: {
+    color: {
+      value: "#00022e",
+    },
+  },
   particles: {
     number: {
       value: 40,
@@ -17,21 +22,16 @@ export default {
         color: "#000000",
       },
       polygon: {
-        nb_sides: 7,
-      },
-      image: {
-        src: "img/github.svg",
-        width: 1000,
-        height: 1000,
+        nbSides: 7,
       },
     },
     opacity: {
-      value: 0.65,
+      value: 0.6,
       random: false,
       anim: {
         enable: true,
-        speed: 0.3996003996003996,
-        opacity_min: 0.2,
+        speed: 0.4,
+        opacityMin: 0.2,
         sync: false,
       },
     },
@@ -41,11 +41,11 @@ export default {
       anim: {
         enable: false,
         speed: 40,
-        size_min: 0.1,
+        sizeMin: 0.1,
         sync: false,
       },
     },
-    line_linked: {
+    lineLinked: {
       enable: true,
       distance: 120,
       color: "#ffffff",
@@ -55,10 +55,9 @@ export default {
     move: {
       enable: true,
       speed: 1,
-      direction: "none",
       random: false,
       straight: false,
-      out_mode: "out",
+      outMode: "out",
       bounce: false,
       attract: {
         enable: false,
@@ -68,43 +67,30 @@ export default {
     },
   },
   interactivity: {
-    detect_on: "canvas",
+    detectsOn: "canvas",
     events: {
-      onhover: {
+      onHover: {
         enable: true,
         mode: "bubble",
       },
-      onclick: {
+      onClick: {
         enable: true,
         mode: "remove",
       },
       resize: true,
     },
     modes: {
-      grab: {
-        distance: 400,
-        line_linked: {
-          opacity: 1,
-        },
-      },
       bubble: {
         distance: 174,
         size: 3,
-        duration: 0.3196803196803197,
-        opacity: 0.16783216783216784,
+        duration: 0.32,
+        opacity: 0.17,
         speed: 3,
       },
-      repulse: {
-        distance: 200,
-        duration: 0.4,
-      },
-      push: {
-        particles_nb: 4,
-      },
       remove: {
-        particles_nb: 2,
+        particlesNb: 2,
       },
     },
   },
-  retina_detect: true,
+  detectRetina: true,
 }

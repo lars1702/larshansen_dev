@@ -1,6 +1,12 @@
 import { createGlobalStyle } from "styled-components/macro"
 
-export const colors = {}
+export const colors = {
+  midnightGreen: "1a535c",
+  turquoise: "4ecdc4",
+  mintCream: "f7fff7",
+  salmonPink: "ff6b6b",
+  naplesYellow: "ffe66d",
+}
 
 const GlobalStyle = createGlobalStyle`
   * {
