@@ -1,23 +1,29 @@
-import React from "react"
-import styled from "styled-components/macro"
-import NavBar from "./Navbar/Navbar"
-import Particles from "./Particles/Particles"
-import config2 from "./Particles/config2"
+import React, { useContext } from "react";
+import styled from "styled-components/macro";
+import NavBar from "./Navbar/Navbar";
+import stateContext from "./StateProvider";
 
 const AppContainer = styled.div`
   position: relative;
   text-align: center;
   height: 100%;
   min-height: 100vh;
-`
-//sdfsd
+`;
+
+interface Istate {
+  test: string;
+  setTest: Function;
+}
+
 const App = (): JSX.Element => {
+  const { test, setTest }: any = useContext(stateContext);
+
   return (
     <AppContainer>
       <NavBar />
-      <Particles options={config2} />
+      <div onClick={() => setTest(test === "tes" ? "test" : "tes")}>{test}</div>
     </AppContainer>
-  )
-}
+  );
+};
 
-export default App
+export default App;

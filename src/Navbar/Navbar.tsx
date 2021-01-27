@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter as Router } from "react-router-dom"
-import { StyledNav, StyledLink } from "./Navbar.style"
+import { StyledNav, StyledLink } from "./Navbar-styles"
 
 const NavBar = (): JSX.Element => {
   return (

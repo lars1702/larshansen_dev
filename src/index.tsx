@@ -1,23 +1,17 @@
-import ReactDOM from "react-dom"
-import React, { StrictMode } from "react"
-import GlobalStyle from "./GlobalStyles"
-import App from "./App"
+import ReactDOM from "react-dom";
+import React, { StrictMode } from "react";
+import GlobalStyles, { Theme } from "./GlobalStyles";
+import App from "./App";
+import { StateProvider } from "./StateProvider";
 
 ReactDOM.render(
   <StrictMode>
-    <GlobalStyle />
-    <App />
+    <GlobalStyles />
+    <Theme>
+      <StateProvider>
+        <App />
+      </StateProvider>
+    </Theme>
   </StrictMode>,
   document.getElementById("root")
-)
-
-//if (module.hot) {
-//  module.hot.accept()
-//}
-
-/*
-above code works because of @types/webpack-env package
-alternative code without @types/webpack-env package:
-if ((module as any).hot) (module as any).hot.accept()
-Use in case of conflict with types on other libraries
-*/
+);
