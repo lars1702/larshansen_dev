@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       # Runs a single command using the runners shell
       - name: Install dependencies
         run: npm install
@@ -18,7 +17,6 @@ jobs:
         run: npm run build
       - name: debugging
         run: ls
-
       # Runs a set of commands using the runners shell
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
@@ -28,12 +26,11 @@ jobs:
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           #port: 21
           #protocol: ftps
-
           local-dir: ./build/
           server-dir: ./public_html/
           # Path and name of the state file - this file is used to track which files have been deployed
           #state-name: # optional
-          dry-run: true
+          #dry-run: true
           # An array of glob patterns, these files will not be included in the publish/delete process
           exclude: .git*/**
             - node_modules/**
