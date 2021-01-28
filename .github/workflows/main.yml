@@ -1,4 +1,4 @@
-name: 🚀 Build and deploy to hostinger
+name: 🚀 Build and deploy to Hostinger 🚀
 on:
   push:
     branches: [master]
@@ -6,34 +6,25 @@ on:
     branches: [master]
   workflow_dispatch:
 jobs:
-  build_and_deploy_to_hostinger:
+  build_n_deploy:
+    name: 🚚 Deploy 🚚
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # Runs a single command using the runners shell
-      - name: Install dependencies
-        run: npm install
-      - name: Build with npm
-        run: npm run build
-      - name: debugging
-        run: ls
-      # Runs a set of commands using the runners shell
-      - name: FTP Deploy
+      - name: 🔨 Install dependencies & Build
+        run: |
+          npm install
+          npm run build
+      - name: 📂 Hostinger FTP transfer 📂
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftp.larshansen.dev
           username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          #port: 21
-          #protocol: ftps
           local-dir: ./build/
-          server-dir: ../
-          # Path and name of the state file - this file is used to track which files have been deployed
-          # state-name: # optional
+          log-level: standard # warn(?), standard, verbose
+          # state-name: #set path & filename
           # dry-run: true
-          # An array of glob patterns, these files will not be included in the publish/delete process
-          # exclude: .git*/**
-          #   - node_modules/**
-          #   - node_modules/**/*
-          # warn, standard, verbose
-          log-level: verbose
+          # Explanation server-dir: using './' created '/publicFolder/publicFolder/[build]'.
+          # Likely cuz of the FTP account's directory settings in Hostinger
+          server-dir: ../
