@@ -30,11 +30,11 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           # ftp server
-          server: ${{ secrets.hostinger_ftp_hostname }}
+          server: ${{ secrets.HOSTINGER_FTP_HOSTNAME }}
           # ftp username
-          username: ${{ secrets.hostinger_ftp_username }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           # ftp password
-          password: ${{ secrets.hostinger_ftp_password }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           port: 21
           # protocol to deploy with - ftp, ftps, or ftps-legacy
           #protocol:
