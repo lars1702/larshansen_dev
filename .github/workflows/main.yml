@@ -35,10 +35,8 @@ jobs:
           #state-name: # optional
           dry-run: true
           # An array of glob patterns, these files will not be included in the publish/delete process
-          exclude:
-              - .git*/**
-              -  **/.git*/**
-              - node_modules/**
-              - node_modules/**/*
-          # How verbose should the information be - warn, standard, verbose
+          exclude: .git*/**
+            - node_modules/**
+            - node_modules/**/*
+          # warn, standard, verbose
           log-level: verbose
