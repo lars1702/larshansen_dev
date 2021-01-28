@@ -26,15 +26,19 @@ jobs:
           server: ftp.larshansen.dev
           username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          port: 21
-          # protocol to deploy with - ftp, ftps, or ftps-legacy
+          #port: 21
           #protocol: ftps
+
           local-dir: ./build/
           server-dir: ./public_html/
           # Path and name of the state file - this file is used to track which files have been deployed
           #state-name: # optional
-          #dry-run: true
+          dry-run: true
           # An array of glob patterns, these files will not be included in the publish/delete process
-          #exclude: # optional
-          # How verbose should the information be - warn, info, debug
-          log-level: debug
+          exclude:
+              - .git*/**
+              -  **/.git*/**
+              - node_modules/**
+              - node_modules/**/*
+          # How verbose should the information be - warn, standard, verbose
+          log-level: verbose
