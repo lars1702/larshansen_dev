@@ -1,0 +1,53 @@
+name: Build and deploy to hostinger
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Build with npm
+        run: npm run build
+
+      # Runs a set of commands using the runners shell
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          # ftp server
+          server: ${{ secrets.hostinger_ftp_hostname }}
+          # ftp username
+          username: ${{ secrets.hostinger_ftp_username }}
+          # ftp password
+          password: ${{ secrets.hostinger_ftp_password }}
+          port: 21
+          # protocol to deploy with - ftp, ftps, or ftps-legacy
+          #protocol:
+          # Folder to upload from, must end with trailing slash /
+          #local-dir: # optional
+          # Path to upload to on the server. Must end with trailing slash /
+          server-dir: /home/u552584824/domains/larshansen.dev/public_html/
+          # Path and name of the state file - this file is used to track which files have been deployed
+          #state-name: # optional
+          # Prints which modifications will be made with current config options, but doesnt actually make any changes
+          #dry-run: # optional
+          # An array of glob patterns, these files will not be included in the publish/delete process
+          #exclude: # optional
+          # How verbose should the information be - warn, info, debug
+          log-level: info
+          # strict or loose
+          #security: # optional
+
