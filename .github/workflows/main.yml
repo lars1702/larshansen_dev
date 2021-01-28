@@ -27,13 +27,13 @@ jobs:
           #port: 21
           #protocol: ftps
           local-dir: ./build/
-          #server-dir: ./
+          # server-dir: ./
           # Path and name of the state file - this file is used to track which files have been deployed
-          #state-name: # optional
-          #dry-run: true
+          # state-name: # optional
+          # dry-run: true
           # An array of glob patterns, these files will not be included in the publish/delete process
-          exclude: .git*/**
-            - node_modules/**
-            - node_modules/**/*
+          # exclude: .git*/**
+          #   - node_modules/**
+          #   - node_modules/**/*
           # warn, standard, verbose
           log-level: verbose
