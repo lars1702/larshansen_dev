@@ -2,15 +2,17 @@ import { createGlobalStyle } from "styled-components/macro";
 import { ThemeProvider } from "styled-components";
 import React from "react";
 
-const theme = {
-  midnightGreen: "#1a535c",
-  turquoise: "#4ecdc4",
-  mintCream: "#f7fff7",
-  salmonPink: "#ff6b6b",
-  naplesYellow: "#ffe66d",
-  navBarBG: "#FAF9F9",
-  navBarText: "#555B6E",
-};
+/** color theme **/
+
+export enum theme {
+  midnightGreen = "#1a535c",
+  turquoise = "#4ecdc4",
+  mintCream = "#f7fff7",
+  salmonPink = "#ff6b6b",
+  naplesYellow = "#ffe66d",
+  navBarBG = "#FAF9F9",
+  navBarText = "#555B6E",
+}
 
 interface IProps {
   children: JSX.Element;
@@ -19,6 +21,8 @@ interface IProps {
 export const Theme = (props: IProps): JSX.Element => {
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 };
+
+/** Global style **/
 
 const GlobalStyle = createGlobalStyle`
   * {

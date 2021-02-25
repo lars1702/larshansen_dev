@@ -1,13 +1,8 @@
-/* eslint-disable */
 import React, { createContext, useContext, useState } from "react";
 
-const AppContext = createContext({});
+const AppContext = createContext<Partial<GlobalStateType>>({});
 
-interface IProps {
-  children: JSX.Element;
-}
-
-export const StateProvider = ({ children }: IProps) => {
+export const StateProvider = (props: StateProviderProps) => {
   const [test, setTest] = useState("tes");
 
   const state = {
@@ -15,7 +10,7 @@ export const StateProvider = ({ children }: IProps) => {
     setTest,
   };
 
-  return <AppContext.Provider value={state}>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={state}>{props.children}</AppContext.Provider>;
 };
 
 export default AppContext;
