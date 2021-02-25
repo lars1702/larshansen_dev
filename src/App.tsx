@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components/macro";
-import NavBar from "./Navbar/Navbar";
+import NavBar from "./Components/Navbar/Navbar";
 import stateContext from "./StateProvider";
 
 const AppContainer = styled.div`
@@ -10,18 +10,12 @@ const AppContainer = styled.div`
   min-height: 100vh;
 `;
 
-interface Istate {
-  test: string;
-  setTest: Function;
-}
-
 const App = (): JSX.Element => {
-  const { test, setTest }: any = useContext(stateContext);
-
+  const { test } = useContext(stateContext);
+  console.log("DEBUG - test:", test);
   return (
     <AppContainer>
       <NavBar />
-      <div onClick={() => setTest(test === "tes" ? "test" : "tes")}>{test}</div>
     </AppContainer>
   );
 };
