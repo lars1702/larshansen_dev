@@ -31,7 +31,7 @@ Create a list of cool developer resources by category. User interface that makes
   Save in database with PSQL
   - Name
   - Docs website
-  - Category / tag (like "css tool", "JS frontend framework", "database", "NOSQL")
+  - Tag (like "css tool", "JS frontend framework", "database", "NOSQL")
   - etc
 
 Examples of resources:
@@ -42,3 +42,4 @@ Examples of resources:
 - Knex.js
 - ElasticSearch
 - Docker & Kubernetes
+
