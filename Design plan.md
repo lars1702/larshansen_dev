@@ -34,7 +34,6 @@ Save in database with PSQL
 - etc
 
 Examples of resources:
-
 - CSS-modules
 - Gatsby.js
 - Mithril.js
