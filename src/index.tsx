@@ -1,9 +1,9 @@
-import ReactDOM from 'react-dom'
-import React, { StrictMode } from 'react'
-import GlobalStyles, { Theme } from './GlobalStyles'
-import App from './App'
-import { StateProvider } from './StateProvider'
-import { BrowserRouter } from 'react-router-dom'
+import ReactDOM from "react-dom"
+import React, { StrictMode } from "react"
+import GlobalStyles, { Theme } from "./GlobalStyles"
+import App from "./App"
+import { StateProvider } from "./StateProvider"
+import { BrowserRouter } from "react-router-dom"
 
 ReactDOM.render(
   <StrictMode>
@@ -16,5 +16,5 @@ ReactDOM.render(
       </StateProvider>
     </Theme>
   </StrictMode>,
-  document.getElementById('root'),
+  document.getElementById("root"),
 )

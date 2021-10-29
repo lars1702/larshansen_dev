@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components/macro";
-import { ThemeProvider } from "styled-components";
-import React from "react";
+import { createGlobalStyle } from "styled-components/macro"
+import { ThemeProvider } from "styled-components"
+import React from "react"
 
 /** color theme **/
 
@@ -15,12 +15,12 @@ export enum theme {
 }
 
 interface IProps {
-  children: JSX.Element;
+  children: JSX.Element
 }
 
 export const Theme = (props: IProps): JSX.Element => {
-  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
-};
+  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+}
 
 /** Global style **/
 
@@ -46,6 +46,6 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

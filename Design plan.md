@@ -15,8 +15,6 @@ This page is made using
 - Interests and articles
 - Resume / CV downloadable
 
-
-
 2. Private side
    Create login page passport (Google, Github)
 
@@ -36,6 +34,7 @@ Save in database with PSQL
 - etc
 
 Examples of resources:
+
 - CSS-modules
 - Gatsby.js
 - Mithril.js

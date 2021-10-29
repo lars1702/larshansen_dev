@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import About from "../About";
-import CV from "../CV";
-import Home from "../Home";
-import ScriptComponent from "../ScriptComponent";
-import { StyledNav, StyledLink } from "./Navbar-styles";
+import React, { useState } from "react"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import About from "../About"
+import CV from "../CV"
+import Home from "../Home"
+import ScriptComponent from "../ScriptComponent"
+import { StyledNav, StyledLink } from "./Navbar-styles"
 
-type useStateType = [number, React.Dispatch<React.SetStateAction<number>>];
+type useStateType = [number, React.Dispatch<React.SetStateAction<number>>]
 
 const NavBar = (): JSX.Element => {
-  const [activePage, setActivePage]: useStateType = useState<number>(0);
+  const [activePage, setActivePage]: useStateType = useState<number>(0)
 
   return (
     <Router>
@@ -34,7 +34,7 @@ const NavBar = (): JSX.Element => {
         <Route path="/scripts" component={ScriptComponent} />
       </Switch>
     </Router>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
