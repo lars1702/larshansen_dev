@@ -1,16 +1,24 @@
 import React, { createContext, useContext, useState } from "react"
+import { GlobalStateType, StateProviderProps } from "./types/StateProvider"
 
-const AppContext = createContext<Partial<GlobalStateType>>({})
+export const GlobalState = createContext<Partial<GlobalStateType>>({})
 
 export const StateProvider = (props: StateProviderProps) => {
-  const [test, setTest] = useState("tes")
+  const [test, setTest] = useState("one-two")
 
   const state = {
     test,
     setTest,
   }
 
-  return <AppContext.Provider value={state}>{props.children}</AppContext.Provider>
+  return <GlobalState.Provider value={state}>{props.children}</GlobalState.Provider>
 }
 
-export default AppContext
+const useGlobalState = () => useContext(GlobalState)
+
+export default useGlobalState
+
+/* usage
+  1. Used directly with useGlobalState-hook >>> const { test } = useGlobalState()
+  2. Used grainy >>> useContext(GlobalState)
+*/

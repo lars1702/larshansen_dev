@@ -1,7 +1,6 @@
-import React, { useContext } from "react"
+import React from "react"
 import styled from "styled-components/macro"
 import NavBar from "./Components/Navbar/Navbar"
-import stateContext from "./StateProvider"
 
 const AppContainer = styled.div`
   position: relative;
@@ -11,8 +10,6 @@ const AppContainer = styled.div`
 `
 
 const App = (): JSX.Element => {
-  const { test } = useContext(stateContext)
-  console.log("DEBUG - test:", test)
   return (
     <AppContainer>
       <NavBar />
