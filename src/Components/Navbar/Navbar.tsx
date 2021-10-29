@@ -7,13 +7,12 @@ import { StyledNav, StyledLink } from "./Navbar-styles"
 
 type useStateType = [number, React.Dispatch<React.SetStateAction<number>>]
 
-const pages = [
-  { url: "/", text: "LARS HANSEN" },
-  { url: "/about", text: "ABOUT" },
-  { url: "/cv", text: "CV" },
-]
-
 const NavBar = (): JSX.Element => {
+  const pages = [
+    { url: "/", text: "LARS HANSEN" },
+    { url: "/about", text: "ABOUT" },
+    { url: "/cv", text: "CV" },
+  ]
   const [activePage, setActivePage]: useStateType = useState<number>(0)
 
   return (
