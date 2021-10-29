@@ -7,7 +7,11 @@ import { StyledNav, StyledLink } from "./Navbar-styles"
 
 type useStateType = [number, React.Dispatch<React.SetStateAction<number>>]
 
-const pages = ["/", "/about", "/cv", "/"]
+const pages = [
+  { url: "/", text: "LARS HANSEN" },
+  { url: "/about", text: "ABOUT" },
+  { url: "/cv", text: "CV" },
+]
 
 const NavBar = (): JSX.Element => {
   const [activePage, setActivePage]: useStateType = useState<number>(0)
@@ -15,15 +19,11 @@ const NavBar = (): JSX.Element => {
   return (
     <Router>
       <StyledNav>
-        <StyledLink onClick={() => setActivePage(0)} active={activePage === 0} to="/">
-          LARS HANSEN
-        </StyledLink>
-        <StyledLink onClick={() => setActivePage(1)} active={activePage === 1} to="/about">
-          ABOUT
-        </StyledLink>
-        <StyledLink onClick={() => setActivePage(2)} active={activePage === 2} to="/cv">
-          CV
-        </StyledLink>
+        {pages.map(({ url, text }, i) => (
+          <StyledLink key={i} onClick={() => setActivePage(i)} active={activePage === i} to={url}>
+            {text}
+          </StyledLink>
+        ))}
       </StyledNav>
       <Switch>
         <Route exact path="/" component={Home} />
