@@ -19,7 +19,7 @@ const NavBar = (): JSX.Element => {
     <Router>
       <StyledNav>
         {pages.map(({ url, text }, i) => (
-          <StyledLink key={i} onClick={() => setActivePage(i)} active={activePage === i} to={url}>
+          <StyledLink key={i} onClick={() => setActivePage(i)} $active={activePage === i} to={url}>
             {text}
           </StyledLink>
         ))}
