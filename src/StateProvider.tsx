@@ -3,7 +3,7 @@ import { GlobalStateType, StateProviderProps } from "./types/StateProvider"
 
 export const GlobalState = createContext<Partial<GlobalStateType>>({})
 
-export const StateProvider = (props: StateProviderProps) => {
+export const StateProvider = (props: StateProviderProps): JSX.Element => {
   const [test, setTest] = useState("one-two")
 
   const state = {
@@ -14,11 +14,18 @@ export const StateProvider = (props: StateProviderProps) => {
   return <GlobalState.Provider value={state}>{props.children}</GlobalState.Provider>
 }
 
-const useGlobalState = () => useContext(GlobalState)
+const useGlobalState = (): Partial<GlobalStateType> => useContext(GlobalState)
 
 export default useGlobalState
 
 /* usage
-  1. Used directly with useGlobalState-hook >>> const { test } = useGlobalState()
-  2. Used grainy >>> useContext(GlobalState)
+1 useGlobalState-hook:
+    import { useGlobalState } from "~/StateProvider"
+    ...
+    const { myState, setMyState } = useGlobalState()
+2 Used grainy
+    import { useGlobalState } from "~/StateProvider"
+    import { useContext } from "react"
+
+    useContext(GlobalState) 
 */
