@@ -20,4 +20,8 @@ settings:
 plugins:
   - react
   - '@typescript-eslint'
-rules: { no-unused-vars: 'off' }
+rules: {
+    no-unused-vars: 'off',
+    react/jsx-uses-react: 'off', # https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
+    react/react-in-jsx-scope: 'off', # https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
+  }

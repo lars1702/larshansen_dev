@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components/macro"
 import { ThemeProvider } from "styled-components"
-import React from "react"
 
 /** color theme **/
 

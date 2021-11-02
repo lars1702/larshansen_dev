@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components/macro"
 import shallow from "zustand/shallow"
 import useStore from "../store"
