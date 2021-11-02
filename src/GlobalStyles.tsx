@@ -4,20 +4,20 @@ import { ThemeProvider } from "styled-components"
 /** color theme **/
 
 export enum theme {
-  midnightGreen = "#1a535c",
-  turquoise = "#4ecdc4",
-  mintCream = "#f7fff7",
-  salmonPink = "#ff6b6b",
-  naplesYellow = "#ffe66d",
   navBarBG = "#FAF9F9",
+  mintCream = "#f7fff7",
+  naplesYellow = "#ffe66d",
+  turquoise = "#4ecdc4",
+  salmonPink = "#ff6b6b",
+  midnightGreen = "#1a535c",
   navBarText = "#555B6E",
 }
 
-interface IProps {
+interface Props {
   children: JSX.Element
 }
 
-export const Theme = (props: IProps): JSX.Element => {
+export const Theme = (props: Props): JSX.Element => {
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
 }
 

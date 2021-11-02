@@ -9,10 +9,8 @@ type State = {
 }
 
 const changeMyStateVariable = (state: State) => {
-  let { myStateVariable } = state
-  if (myStateVariable === "hello world") myStateVariable = "hello, world!"
-  else if (myStateVariable === "hello, world!") myStateVariable = "hello world"
-  return { myStateVariable }
+  const { myStateVariable } = state
+  return { myStateVariable: myStateVariable === "hello world" ? "hello, world!" : "hello world" }
 }
 
 const useStore = create(set => ({
