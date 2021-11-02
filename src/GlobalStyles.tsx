@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #f7fff7;
+    background-color: ${theme.mintCream};
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
